@@ -18,10 +18,10 @@ Exercices du cours "Développez des sites web avec Java EE" sur OpenClassrooms, 
     - ✔ Manipuler des Java Beans dans les JSP
 -  3️⃣ Des vues puissantes avec la JSTL
     - ✔ Qu'est-ce que la JSTL
-    - Mettre en place la JSTL
-    - JSTL et variables
-    - JSTL et conditions
-    - JSTL et boucles
+    - ✔ Mettre en place la JSTL
+    - ✔ JSTL et variables
+    - ✔ JSTL et conditions
+    - ✔ JSTL et boucles
 -  4️⃣ Développer une application web
     - Les formulaires avec Java EE
     - Envoyer des fichiers
