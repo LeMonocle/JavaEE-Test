@@ -2,7 +2,7 @@
 
 Exercices du cours "Développez des sites web avec Java EE" sur OpenClassrooms, afin de me préparer à ma formation de l'ENI.
 
-## Plan du cours :
+## Plan du cours et évolution :
 -  1️⃣ Premiers pas avec Java EE
     - ✔ Qu'est-ce que Java EE ?
     - ✔ Le modèle MVC
