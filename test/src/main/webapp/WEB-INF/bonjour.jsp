@@ -1,4 +1,6 @@
 <%@ page pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +10,11 @@
 <body>
 	<%@ include file="menu.jsp"%>
 	<h2>Premiers exercices</h2>
-	<p>Ceci est une page, bonjour à tous !</p>
+	<p>Ceci est une page, bonjour à toutes et à tous !<br>
+	
+	<!-- JSTL Test -->
+	<c:out value="Bonjour again! On essaye quelque chose"/>
+	</p>
 	<p>
 		<%
 		String name = (String) request.getAttribute("name");
@@ -50,5 +56,26 @@
 	<h2>Exercices sur les auteurs</h2>
 	<p>Bonjour ${ auteur.prenom } ${ auteur.nom }.</p>
 	<p>${auteur.actif ? 'Vous êtes très actif !' : 'Vous êtes inactif (pas bien).'}</p>
+	
+	<h1>Tests sur les JSTL</h1>
+	<p><c:out value="${ variable }" escapeXml="false">Valeur par défaut</c:out></p>
+	
+	<c:set var="pseudo" value="Mat29" scope="page"/> <!-- Scopes possibles: request, session, application... -->
+	
+	<p><c:out value="${ pseudo }"></c:out></p>
+	
+	<!-- On change la variable -->
+	
+	<c:set var="pseudo" value="Robert" scope="page"/>
+	
+	<p><c:out value="${ pseudo }"></c:out></p>
+	
+	<!-- On regarde avec les beans -->
+	
+	<p>Premier nom de l'auteur : <c:out value="${ auteur.prenom }"></c:out></p>
+	<c:set target="${ auteur }" property="prenom" value="Benoît"/> <!-- On change le prénom de l'auteur -->
+	<p>Prénom de l'auteur, mais changé : <c:out value="${ auteur.prenom }"></c:out></p>
+	
+	
 </body>
 </html>
